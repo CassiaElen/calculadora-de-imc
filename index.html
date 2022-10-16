@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular imc</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="calc-container" >
+            <h2>Calculadora de IMC</h2>
+            <div id="imc-form">
+                <div class="form-input">
+                    <div class="form-control">
+                        <label for="altura">Altura</label>
+                        <input type="text" name="altura" id="altura" placeholder="Exemplo 1,60"/>
+                    </div>
+                    <div class="form-control">
+                        <label for="peso">Peso</label>
+                        <input type="text" name="peso" id="peso" placeholder="Exemplo 70,6"/>
+                    </div>
+                </div>
+                <div class="action-control">
+                    <button type="submit" onclick="calImc()">Calcular</button>
+                    <button type="reset" id="clear-btn">Limpar</button>
+                </div>
+            </div>
+        </div>
+        <div id="result-container" >
+            <p id="imc-number">Seu IMC: <span id="imc"></span></p>
+            <p id="imc-info">Situação atual: <span id="classificação"></span></p>
+            <h3>Confira as classificações</h3>
+            <div id="imc-table">
+                <div class="table">
+                    <h4>IMC</h4>
+                    <h4>classificação</h4>
+                    <h4>Obesidade</h4>
+                </div>
+                <div class="table" id="magreza">
+                    <h4>menor que 18,5</h4>
+                    <h4>magreza</h4>
+                    <h4>0</h4>
+                </div>
+                <div class="table" id="normal">
+                    <h4>entre 18,5 e 24,9</h4>
+                    <h4>normal</h4>
+                    <h4>0</h4>
+                </div>
+                <div class="table" id="sobrepeso">
+                    <h4>entre 25 e 29,9</h4>
+                    <h4>sobrepeso</h4>
+                    <h4>|</h4>
+                </div>
+                <div class="table" id="obesidade">
+                    <h4>entre 30 e 39,9</h4>
+                    <h4>obesidade</h4>
+                    <h4>||</h4>
+                </div>
+                <div class="table" id="obesidade-grave">
+                    <h4>maior que 40</h4>
+                    <h4>obesidade grave</h4>
+                    <h4>|||</h4>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>@Cassia Elen</p>
+        </footer>
+    </div>  
+</body>
+</html>
